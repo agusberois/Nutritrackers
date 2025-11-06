@@ -1,0 +1,65 @@
+.features {
+  background-color: white;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.features h2 span {
+  color: var(--color-accent);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: var(--color-bg-alt);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .features h2 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}

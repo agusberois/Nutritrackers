@@ -1,0 +1,118 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.logo-highlight {
+  color: var(--color-accent);
+}
+
+/* Links desktop */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--color-accent);
+}
+
+/* Botón de contacto */
+.contact-btn {
+  background-color: var(--color-primary);
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* --- MENU MOBILE --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text);
+  transition: all 0.3s;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Animación del ícono */
+.menu-toggle .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}

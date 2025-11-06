@@ -1,16 +1,37 @@
-import React from 'react'
+import { useState } from "react";
+import "./Navbar.css";
 
-export default function Navbar() {
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className="fixed w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-        <div className="text-2xl font-header text-blue-petrol">Nutritrackers</div>
-        <div className="space-x-6 text-blue-petrol font-sans">
-          <a href="#features" className="hover:text-green-mint">Funcionalidades</a>
-          <a href="#how" className="hover:text-green-mint">Cómo funciona</a>
-          <a href="#contact" className="hover:text-green-mint">Contacto</a>
+    <header className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-logo">
+          <span className="logo-highlight">Nutri</span>trackers
+        </div>
+
+        <nav className={`navbar-links ${isOpen ? "active" : ""}`}>
+          <a href="#inicio">Inicio</a>
+          <a href="#caracteristicas">Características</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#precios">Precios</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contacto" className="contact-btn">Contacto</a>
+        </nav>
+
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <span className={`bar ${isOpen ? "open" : ""}`}></span>
+          <span className={`bar ${isOpen ? "open" : ""}`}></span>
+          <span className={`bar ${isOpen ? "open" : ""}`}></span>
         </div>
       </div>
-    </nav>
-  )
+    </header>
+  );
 }
+
+export default Navbar;

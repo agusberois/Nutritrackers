@@ -1,25 +1,44 @@
-import React from 'react'
+import "./Features.css";
 
-const features = [
-  { title: 'Seguimiento de clientes', description: 'Controla la evolución de cada paciente fácilmente.' },
-  { title: 'Análisis nutricional', description: 'Obtén reportes detallados y personalizados.' },
-  { title: 'Informes automáticos', description: 'Genera estadísticas y gráficos de progreso al instante.' },
-]
+function Features() {
+  const features = [
+    {
+      icon: "📋",
+      title: "Gestión de pacientes",
+      text: "Organizá fácilmente la información de tus pacientes, historial clínico y progreso.",
+    },
+    {
+      icon: "📈",
+      title: "Seguimiento nutricional",
+      text: "Visualizá la evolución de tus pacientes con métricas y reportes personalizados.",
+    },
+    {
+      icon: "💬",
+      title: "Comunicación centralizada",
+      text: "Mantené toda la información y contacto con tus pacientes en un solo lugar.",
+    },
+    {
+      icon: "⏱️",
+      title: "Ahorro de tiempo",
+      text: "Simplificá tus tareas diarias con herramientas automáticas y plantillas configurables.",
+    },
+  ];
 
-export default function Features() {
   return (
-    <section id="features" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-header text-blue-petrol mb-12">Funcionalidades</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((f, idx) => (
-            <div key={idx} className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-              <h3 className="text-2xl font-header text-green-mint mb-4">{f.title}</h3>
-              <p className="text-blue-petrol">{f.description}</p>
-            </div>
-          ))}
-        </div>
+    <section className="features" id="caracteristicas">
+      <h2>¿Por qué elegir <span>Nutritrackers</span>?</h2>
+
+      <div className="features-grid">
+        {features.map((feature, index) => (
+          <div className="feature-card" key={index}>
+            <div className="feature-icon">{feature.icon}</div>
+            <h3>{feature.title}</h3>
+            <p>{feature.text}</p>
+          </div>
+        ))}
       </div>
     </section>
-  )
+  );
 }
+
+export default Features;

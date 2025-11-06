@@ -1,16 +1,33 @@
-import React from 'react'
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-petrol text-white py-6 mt-12">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-        <div className="font-header text-lg">Nutritrackers</div>
-        <div className="space-x-4 mt-4 md:mt-0">
-          <a href="#" className="hover:text-green-mint">Instagram</a>
-          <a href="#" className="hover:text-green-mint">LinkedIn</a>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-info">
+          <h3>Hablemos</h3>
+          <p>
+            ¿Tenés dudas o querés saber más sobre Nutritrackers?
+            <br /> Escribinos y te respondemos a la brevedad.
+          </p>
+          <a href="mailto:contacto@nutritrackers.com" className="contact-button">
+            Contactar
+          </a>
         </div>
-        <div className="mt-4 md:mt-0">© 2025 Nutritrackers. Todos los derechos reservados.</div>
+
+        <div className="footer-socials">
+          <h3>Seguinos</h3>
+          <div className="social-icons">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} Nutritrackers. Todos los derechos reservados.</p>
       </div>
     </footer>
-  )
+  );
 }

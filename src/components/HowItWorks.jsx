@@ -1,20 +1,41 @@
-import React from 'react'
-
-const steps = [
-  'Registro y creación de perfiles de clientes',
-  'Trackeo de datos nutricionales',
-  'Análisis y reportes automáticos',
-]
+import "./HowItWorks.css";
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="py-20 bg-gray-light">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-header text-blue-petrol mb-12">Cómo funciona</h2>
-        <ol className="list-decimal list-inside space-y-6 text-blue-petrol text-lg">
-          {steps.map((s, idx) => <li key={idx}>{s}</li>)}
-        </ol>
+    <section className="howitworks" id="como-funciona">
+      <h2>¿Cómo funciona Nutritrackers?</h2>
+      <p className="subtitle">
+        En tres simples pasos, optimizá tu trabajo como nutricionista.
+      </p>
+
+      <div className="steps">
+        <div className="step">
+          <div className="step-number">1</div>
+          <h3>Registrá tus pacientes</h3>
+          <p>
+            Cargá tus clientes fácilmente con toda su información nutricional y
+            de progreso.
+          </p>
+        </div>
+
+        <div className="step">
+          <div className="step-number">2</div>
+          <h3>Seguimiento inteligente</h3>
+          <p>
+            Visualizá gráficos, avances y registros para un control eficiente de
+            cada paciente.
+          </p>
+        </div>
+
+        <div className="step">
+          <div className="step-number">3</div>
+          <h3>Mejorá tu gestión</h3>
+          <p>
+            Ahorrá tiempo y ofrecé una experiencia profesional con una interfaz
+            simple y clara.
+          </p>
+        </div>
       </div>
     </section>
-  )
+  );
 }

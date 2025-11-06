@@ -1,93 +1,50 @@
-/* Importar Tailwind */
-@import "tailwindcss";
-
-/* -------------------------------
-   Definir Theme Variables
--------------------------------- */
-@theme {
-  /* Colores principales de Nutritrackers */
-  --color-green-mint: #007bff;
-  --color-blue-petrol: #1b263b;
-  --color-gray-light: oklch(0.95 0 0);
-  --color-orange-soft: oklch(0.63 0.15 80);
-  --color-white: oklch(1 0 0);
+:root {
+  --color-primary: #1B263B;
+  --color-primary-hover: #2A3D5F;
+  --color-accent: #007BFF;
+  --color-text: #333333;
+  --color-text-secondary: #555555;
+  --color-bg: #F7F9FC;
+  --color-bg-alt: #F9FAFB;
+  --color-danger: #E74C3C;
 }
 
-/* -------------------------------
-   Clases utilitarias personalizadas
--------------------------------- */
-
-/* Fondos */
-.bg-green-mint {
-  background-color: var(--color-green-mint);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-.bg-blue-petrol {
-  background-color: var(--color-blue-petrol);
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.bg-gray-light {
-  background-color: var(--color-gray-light);
+html {
+  scroll-behavior: smooth;
 }
 
-.bg-orange-soft {
-  background-color: var(--color-orange-soft);
+
+button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.bg-white {
-  background-color: var(--color-white);
+button:hover {
+  background-color: var(--color-primary-hover);
 }
 
-/* Textos */
-.text-green-mint {
-  color: var(--color-green-mint);
-}
-
-.text-blue-petrol {
-  color: var(--color-blue-petrol);
-}
-
-.text-gray-light {
-  color: var(--color-gray-light);
-}
-
-.text-orange-soft {
-  color: var(--color-orange-soft);
-}
-
-.text-white {
-  color: var(--color-white);
-}
-
-/* Bordes y detalles */
-.border-green-mint {
-  border-color: var(--color-green-mint);
-}
-
-.border-blue-petrol {
-  border-color: var(--color-blue-petrol);
-}
-
-.border-gray-light {
-  border-color: var(--color-gray-light);
-}
-
-.border-orange-soft {
-  border-color: var(--color-orange-soft);
-}
-
-/* -------------------------------
-   Tipografía
--------------------------------- */
-@layer base {
-  body {
-    font-family: 'Inter', sans-serif;
-    color: var(--color-blue-petrol);
-    background-color: var(--color-white);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    color: var(--color-blue-petrol);
-  }
+section {
+  padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: auto;
 }
