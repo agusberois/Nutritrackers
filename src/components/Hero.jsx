@@ -1,6 +1,10 @@
+import { useState } from "react";
+import heroImage from "../assets/images/Nutritrackers.png";
 import "./Hero.css";
 
 function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="hero" id="inicio">
       <div className="hero-content">
@@ -17,11 +21,22 @@ function Hero() {
 
         <div className="hero-image">
           <img
-            src="/images/mockup-app.png"
+            src={heroImage}
             alt="Vista previa de Nutritrackers"
+            onClick={() => setIsOpen(true)}
           />
         </div>
       </div>
+
+      {isOpen && (
+        <div className="image-modal" onClick={() => setIsOpen(false)}>
+          <img
+            src={heroImage}
+            alt="Vista ampliada de Nutritrackers"
+            className="image-modal-content"
+          />
+        </div>
+      )}
     </section>
   );
 }
