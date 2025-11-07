@@ -5,7 +5,7 @@
 }
 
 .pricing h2 {
-  color: #1b263b;
+  color: var(--color-primary);
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -25,7 +25,7 @@
 }
 
 .card {
-  background-color: #f9fafb;
+  background-color: var(--color-bg-alt);
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   flex: 1 1 280px;
@@ -40,7 +40,7 @@
 }
 
 .card.featured {
-  background-color: #007bff;
+  background-color: var(--color-accent);
   color: white;
   transform: scale(1.05);
 }
@@ -75,7 +75,7 @@
 }
 
 .card button {
-  background-color: #1b263b;
+  background-color: var(--color-primary);
   color: white;
   border: none;
   border-radius: 8px;
@@ -86,11 +86,11 @@
 
 .card.featured button {
   background-color: white;
-  color: #007bff;
+  color: var(--color-accent);
 }
 
 .card button:hover {
-  background-color: #2a3d5f;
+  background-color: var(--color-primary-hover);
 }
 
 .card.featured button:hover {

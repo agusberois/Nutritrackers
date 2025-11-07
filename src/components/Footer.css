@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1b263b;
+  background-color: var(--color-primary);
   color: white;
   padding: 60px 20px 20px;
   text-align: center;
@@ -28,7 +28,7 @@
 }
 
 .contact-button {
-  background-color: #007bff;
+  background-color: var(--color-accent);
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -37,7 +37,7 @@
 }
 
 .contact-button:hover {
-  background-color: #2a3d5f;
+  background-color: var(--color-primary-hover);
 }
 
 .social-icons {
@@ -62,6 +62,12 @@
   padding-top: 15px;
   font-size: 0.9rem;
   color: #ccc;
+}
+
+.footer-bottom-developed-by a {
+  text-decoration: none;
+  color: var(--color-accent);
+
 }
 
 /* 📱 Responsive */

@@ -1,11 +1,11 @@
 .howitworks {
-  background-color: #f7f9fc;
+  background-color: var(--color-bg);
   padding: 80px 20px;
   text-align: center;
 }
 
 .howitworks h2 {
-  color: #1b263b;
+  color: var(--color-primary);
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -41,7 +41,7 @@
 }
 
 .step-number {
-  background-color: #007bff;
+  background-color: var(--color-accent);
   color: white;
   width: 40px;
   height: 40px;
@@ -54,7 +54,7 @@
 }
 
 .step h3 {
-  color: #1b263b;
+  color: var(--color-primary);
   font-size: 1.2rem;
   margin-bottom: 10px;
 }

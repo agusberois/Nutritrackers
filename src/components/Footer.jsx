@@ -27,6 +27,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Nutritrackers. Todos los derechos reservados.</p>
+        <p className="footer-bottom-developed-by"> Desarrollado por <a href="https://agusberois.dev" target="_blank">agusberois.dev</a> </p>
       </div>
     </footer>
   );
